@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Admin Paneli</h1>
+    <h2>Yazılar</h2>
+    <% yazilar.forEach(yazi => { %>
+        <div class="kart">
+            <h3><%= yazi.baslik %></h3>
+            <p><%= yazi.tarih %></p>
+        </div>
+    <% }) %>
+</body>
+</html>

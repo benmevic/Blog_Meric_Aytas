@@ -1,0 +1,23 @@
+h1 {
+    color :red;
+    font-size: 32px;
+}
+body {
+  background-color: #755757;
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+.kart {
+    background-color: rgb(214, 214, 214);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+nav a {
+    margin-right: 16px;
+    text-decoration: none;
+    color: white;
+}

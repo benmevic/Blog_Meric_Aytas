@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meriç Aytaş Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Anasayfa</a>
+        <a href="/hakkimda">Hakkımda</a>
+    </nav>
+    <h1>Meriç Aytaş Blog</h1>
+    <p>Burada teknoloji hakkında yazılar paylaşıyorum.</p>
+<% yazilar.forEach(yazi => { %>
+    <div class="kart">
+        <h3><%= yazi.baslik %></h3>
+        <p class="tarih"><%= yazi.tarih %></p>
+        <p><%= yazi.ozet %></p>
+        <a href="#">Devamını oku</a>
+    </div>
+<% }) %>
+</body>
+</html>
