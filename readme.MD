@@ -14,27 +14,37 @@ Kişisel blog sitesi. Node.js, Express ve SQLite ile geliştirilmiştir.
 ## Kurulum
 
 Projeyi klonla:
-git clone https://github.com/benmevic/Blog_Meric_Aytas/
+```
+git clone https://github.com/kullaniciadin/Siber_Vatan_Web_Blog.git
+```
 
 Bağımlılıkları yükle:
+```
 npm install
+```
 
 Sunucuyu başlat:
+```
 node server.js
+```
 
 Tarayıcıda aç:
+```
 http://localhost:1907
+```
 
 ## Admin Paneli
 
 Admin paneline erişmek için:
+```
 http://localhost:1907/giris
+```
 
-Kullanıcı adı: bars_admin
-Şifre: 1234
+- Kullanıcı adı: `bars_admin`
+- Şifre: `1234`
 
 ## Dosya Yapısı
-
+```
 Siber_Vatan_Web_Blog/
 ├── public/
 │   ├── style.css
@@ -50,6 +60,7 @@ Siber_Vatan_Web_Blog/
 ├── veritabani.js
 ├── package.json
 └── .gitignore
+```
 
 ## Özellikler
 
