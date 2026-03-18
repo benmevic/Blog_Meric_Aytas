@@ -15,7 +15,7 @@ Kişisel blog sitesi. Node.js, Express ve SQLite ile geliştirilmiştir.
 
 Projeyi klonla:
 ```
-git clone https://github.com/kullaniciadin/Siber_Vatan_Web_Blog.git
+git clone https://github.com/benmevic/Blog_Meric_Aytas
 ```
 
 Bağımlılıkları yükle:
