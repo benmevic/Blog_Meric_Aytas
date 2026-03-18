@@ -1,23 +1,295 @@
-h1 {
-    color :red;
-    font-size: 32px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body {
-  background-color: #755757;
-  font-family: Arial, sans-serif;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f6;
+    color: #1a1a1a;
 }
-.kart {
-    background-color: rgb(214, 214, 214);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+
+nav {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
 }
+
 nav a {
-    margin-right: 16px;
+    font-size: 13px;
+    color: #555;
     text-decoration: none;
-    color: white;
+    margin-left: 24px;
+}
+
+nav a:hover {
+    color: #1a1a1a;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.hero {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 48px 40px 40px;
+}
+
+.icerik {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 40px;
+}
+
+.kart {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: border-color .2s;
+}
+
+.kart:hover {
+    border-color: #aaa;
+}
+
+.kart h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.kart .tarih {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.kart p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.kart a {
+    font-size: 15px;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 32px;
+}
+
+.giris-sayfa {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f6;
+}
+
+.giris-kutu {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+
+.giris-kutu h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.giris-kutu input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    outline: none;
+    font-family: inherit;
+}
+
+.giris-kutu input:focus {
+    border-color: #aaa;
+}
+
+.giris-kutu button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 4px;
+}
+
+.giris-kutu button:hover {
+    background: #333;
+}
+
+.admin-icerik {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 40px;
+}
+
+.admin-bolum {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.admin-bolum h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    border-color: #aaa;
+}
+
+.admin-form button {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.admin-form button:hover {
+    background: #333;
+}
+
+.admin-kart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.admin-kart:last-child {
+    border-bottom: none;
+}
+
+.admin-kart-bilgi h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.admin-kart-bilgi p {
+    font-size: 12px;
+    color: #999;
+}
+
+.admin-kart-butonlar {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-duzenle {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.btn-duzenle:hover {
+    border-color: #aaa;
+}
+
+.btn-sil {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid #ffcccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #cc0000;
+    background: #fff5f5;
+}
+
+.btn-sil:hover {
+    background: #ffe5e5;
+}
+
+.hata-mesaji {
+    font-size: 13px;
+    color: #cc0000;
+    background: #fff5f5;
+    border: 1px solid #ffcccc;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.kart-resim {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.yazi-resim {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 24px;
 }

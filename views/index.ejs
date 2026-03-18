@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meriç Aytaş Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav>
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="/logo.jpg" alt="BarsLab" style="height:32px;width:auto;">
+        <span style="font-size:15px;font-weight:600;color:#1a1a1a;">BarsLab</span>
+    </a>
+    <div>
         <a href="/">Anasayfa</a>
         <a href="/hakkimda">Hakkımda</a>
-    </nav>
-    <h1>Meriç Aytaş Blog</h1>
-    <p>Burada teknoloji hakkında yazılar paylaşıyorum.</p>
-<% yazilar.forEach(yazi => { %>
-    <div class="kart">
-        <h3><%= yazi.baslik %></h3>
-        <p class="tarih"><%= yazi.tarih %></p>
-        <p><%= yazi.ozet %></p>
-        <a href="#">Devamını oku</a>
     </div>
-<% }) %>
+</nav>
+    <div class="hero">
+    <div style="max-width:760px;margin:0 auto">
+        <h1>BarsLab Blog</h1>
+        <p style="font-size:14px;color:#666;">Teknoloji hakkında yazılar.</p>
+    </div>
+</div>
+    <div class="icerik">
+        <% yazilar.forEach(yazi => { %>
+            <div class="kart">
+    <% if (yazi.resim) { %>
+        <img src="<%= yazi.resim %>" alt="<%= yazi.baslik %>" class="kart-resim">
+    <% } %>
+    <h3><%= yazi.baslik %></h3>
+    <p class="tarih"><%= yazi.tarih %></p>
+    <p><%= yazi.kisaIcerik %></p>
+    <a href="/yazi/<%= yazi.id %>">Devamını oku</a>
+</div>
+        <% }) %>
+    </div>
+    <footer>© 2026 Meriç Aytaş</footer>
 </body>
 </html>

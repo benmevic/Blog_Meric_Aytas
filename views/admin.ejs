@@ -2,17 +2,55 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarsLab - Admin</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Admin Paneli</h1>
-    <h2>Yazılar</h2>
-    <% yazilar.forEach(yazi => { %>
-        <div class="kart">
-            <h3><%= yazi.baslik %></h3>
-            <p><%= yazi.tarih %></p>
+    <nav>
+        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="/logo.jpg" alt="BarsLab" style="height:32px;width:auto;">
+            <span style="font-size:15px;font-weight:600;color:#1a1a1a;">BarsLab</span>
+        </a>
+        <div>
+            <a href="/">Siteye Dön</a>
+            <a href="/cikis">Çıkış</a>
         </div>
-    <% }) %>
+    </nav>
+
+    <div class="admin-icerik">
+
+        <div class="admin-bolum">
+            <h2>Yeni Yazı Ekle</h2>
+            <form method="POST" action="/admin/ekle" class="admin-form" enctype="multipart/form-data">
+    <input type="text" name="baslik" placeholder="Başlık" required>
+    <input type="text" name="tarih" placeholder="Tarih (ör: 17.03.2026)" required>
+    <textarea name="icerik" placeholder="Yazının tam içeriği" rows="6" required></textarea>
+    <div style="margin-bottom:12px;">
+        <label style="font-size:13px;color:#666;display:block;margin-bottom:6px;">Kapak Resmi</label>
+        <input type="file" name="resim" accept="image/*">
+    </div>
+    <button type="submit">Ekle</button>
+</form>
+        </div>
+
+        <div class="admin-bolum">
+            <h2>Mevcut Yazılar</h2>
+            <% yazilar.forEach(yazi => { %>
+                <div class="admin-kart">
+                    <div class="admin-kart-bilgi">
+                        <h3><%= yazi.baslik %></h3>
+                        <p><%= yazi.tarih %></p>
+                    </div>
+                    <div class="admin-kart-butonlar">
+                        <a href="/admin/duzenle/<%= yazi.id %>" class="btn-duzenle">Düzenle</a>
+                        <a href="/admin/sil/<%= yazi.id %>" class="btn-sil">Sil</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+
+    </div>
+    <footer>© 2026 Meriç Aytaş</footer>
 </body>
 </html>

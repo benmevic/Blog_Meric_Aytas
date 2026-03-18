@@ -2,15 +2,25 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Girişi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarsLab - Giriş</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Admin Girişi</h1>
-    <form method="POST" action="/giris">
-        <input type="text" name="kullanici" placeholder="Kullanıcı adı">
-        <input type="password" name="sifre" placeholder="Şifre">
-        <button type="submit">Giriş Yap</button>
-    </form>
+    <div class="giris-sayfa">
+        <div class="giris-kutu">
+            <img src="/logo.jpg" alt="BarsLab" style="height:40px;width:auto;margin-bottom:16px;">
+            <h2>BarsLab</h2>
+            <p style="font-size:13px;color:#999;margin-bottom:32px;">Admin paneline giriş yap</p>
+            <% if (typeof hata !== 'undefined') { %>
+                <p class="hata-mesaji"><%= hata %></p>
+            <% } %>
+            <form method="POST" action="/giris">
+                <input type="text" name="kullanici" placeholder="Kullanıcı adı">
+                <input type="password" name="sifre" placeholder="Şifre">
+                <button type="submit">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
