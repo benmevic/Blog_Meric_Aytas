@@ -3,39 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meriç Aytaş Blog</title>
+    <title>Meriç Aytaş · Blog</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav>
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-        <img src="/logo.jpg" alt="BarsLab" style="height:32px;width:auto;">
-        <span style="font-size:15px;font-weight:600;color:#1a1a1a;">BarsLab</span>
-    </a>
-    <div>
-        <a href="/">Anasayfa</a>
-        <a href="/hakkimda">Hakkımda</a>
-    </div>
-</nav>
+        <a href="/" class="nav-brand">
+            <div class="nav-logo">MA</div>
+            <span class="nav-name">Meriç Aytaş Blog</span>
+        </a>
+        <div>
+            <a href="/">Anasayfa</a>
+            <a href="/hakkimda">Hakkımda</a>
+        </div>
+    </nav>
+
     <div class="hero">
-    <div style="max-width:760px;margin:0 auto">
-        <h1>BarsLab Blog</h1>
-        <p style="font-size:14px;color:#666;">Teknoloji hakkında yazılar.</p>
+        <div class="hero-accent"></div>
+        <div class="hero-inner">
+            <div class="hero-tag">Kişisel Blog</div>
+            <h1>Siber güvenlik ve<br><span>teknoloji</span> üzerine.</h1>
+            <p>Siber güvenlik, teknoloji ve yazılım üzerine kişisel notlar. Öğrendiklerimi, keşfettiklerimi ve düşüncelerimi paylaşıyorum.</p>
+            <div class="hero-stats">
+                <div>
+                    <div class="hero-stat-num"><%= yazilar.length %></div>
+                    <div class="hero-stat-label">Yazı</div>
+                </div>
+                <div>
+                    <div class="hero-stat-num">16/03/2026</div>
+                    <div class="hero-stat-label">Kuruluş</div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
     <div class="icerik">
+        <p class="bolum-baslik">Son Yazılar</p>
         <% yazilar.forEach(yazi => { %>
             <div class="kart">
-    <% if (yazi.resim) { %>
-        <img src="<%= yazi.resim %>" alt="<%= yazi.baslik %>" class="kart-resim">
-    <% } %>
-    <h3><%= yazi.baslik %></h3>
-    <p class="tarih"><%= yazi.tarih %></p>
-    <p><%= yazi.kisaIcerik %></p>
-    <a href="/yazi/<%= yazi.id %>">Devamını oku</a>
-</div>
+                <% if (yazi.resim) { %>
+                    <img src="<%= yazi.resim %>" class="kart-resim" alt="<%= yazi.baslik %>">
+                <% } else { %>
+                    <div class="kart-resim-placeholder">Kapak resmi yok</div>
+                <% } %>
+                <div class="kart-body">
+                    <h3><%= yazi.baslik %></h3>
+                    <p class="tarih"><%= yazi.tarih %></p>
+                    <p><%= yazi.kisaIcerik %></p>
+                    <a href="/yazi/<%= yazi.id %>">Devamını oku →</a>
+                </div>
+            </div>
         <% }) %>
     </div>
-    <footer>© 2026 Meriç Aytaş</footer>
+
+    <footer>
+        <span class="footer-left">Meriç Aytaş · Kişisel Blog</span>
+        <span class="footer-right">© 2026 · Tüm hakları saklıdır.</span>
+    </footer>
 </body>
 </html>

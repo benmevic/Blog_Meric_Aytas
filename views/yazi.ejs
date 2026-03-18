@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarsLab - <%= yazi.baslik %></title>
+    <title>Meriç Aytaş · <%= yazi.baslik %></title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav>
-        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <img src="/logo.jpg" alt="BarsLab" style="height:32px;width:auto;">
-            <span style="font-size:15px;font-weight:600;color:#1a1a1a;">BarsLab</span>
+        <a href="/" class="nav-brand">
+            <div class="nav-logo">MA</div>
+            <span class="nav-name">Meriç Aytaş Blog</span>
         </a>
         <div>
             <a href="/">Anasayfa</a>
@@ -19,22 +19,27 @@
     </nav>
 
     <div class="hero">
-    <div style="max-width:760px;margin:0 auto">
-        <h1><%= yazi.baslik %></h1>
-        <p style="font-size:13px;color:#999;margin-top:8px;"><%= yazi.tarih %></p>
+        <div class="hero-accent"></div>
+        <div class="hero-inner">
+            <div class="hero-tag">Blog Yazısı</div>
+            <h1><%= yazi.baslik %></h1>
+            <p style="font-size:13px;color:#999;margin-top:8px;"><%= yazi.tarih %></p>
+        </div>
     </div>
-</div>
 
-<div class="icerik">
-    <% if (yazi.resim) { %>
-        <img src="<%= yazi.resim %>" alt="<%= yazi.baslik %>" class="yazi-resim">
-    <% } %>
-    <div class="admin-bolum">
-        <p style="font-size:15px;color:#555;line-height:1.8;"><%= yazi.icerik %></p>
+    <div class="icerik">
+        <% if (yazi.resim) { %>
+            <img src="<%= yazi.resim %>" class="yazi-resim" alt="<%= yazi.baslik %>">
+        <% } %>
+        <div class="admin-bolum">
+            <p style="font-size:15px;color:#555;line-height:1.8;"><%= yazi.icerik %></p>
+        </div>
+        <a href="/" class="btn-duzenle" style="display:inline-block;margin-top:8px;padding:10px 20px;">← Geri Dön</a>
     </div>
-   <a href="/" class="btn-duzenle" style="display:inline-block;margin-top:8px;padding:10px 20px;">← Geri Don</a>
-</div>
 
-    <footer>© 2026 Meriç Aytaş</footer>
+    <footer>
+        <span class="footer-left">Meriç Aytaş · Kişisel Blog</span>
+        <span class="footer-right">© 2026 · Tüm hakları saklıdır.</span>
+    </footer>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarsLab - Admin</title>
+    <title>Meriç Aytaş · Admin</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav>
-        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <img src="/logo.jpg" alt="BarsLab" style="height:32px;width:auto;">
-            <span style="font-size:15px;font-weight:600;color:#1a1a1a;">BarsLab</span>
+        <a href="/" class="nav-brand">
+            <div class="nav-logo">MA</div>
+            <span class="nav-name">Meriç Aytaş Blog</span>
         </a>
         <div>
             <a href="/">Siteye Dön</a>
@@ -19,19 +19,18 @@
     </nav>
 
     <div class="admin-icerik">
-
         <div class="admin-bolum">
             <h2>Yeni Yazı Ekle</h2>
             <form method="POST" action="/admin/ekle" class="admin-form" enctype="multipart/form-data">
-    <input type="text" name="baslik" placeholder="Başlık" required>
-    <input type="text" name="tarih" placeholder="Tarih (ör: 17.03.2026)" required>
-    <textarea name="icerik" placeholder="Yazının tam içeriği" rows="6" required></textarea>
-    <div style="margin-bottom:12px;">
-        <label style="font-size:13px;color:#666;display:block;margin-bottom:6px;">Kapak Resmi</label>
-        <input type="file" name="resim" accept="image/*">
-    </div>
-    <button type="submit">Ekle</button>
-</form>
+                <input type="text" name="baslik" placeholder="Başlık" required>
+                <input type="text" name="tarih" placeholder="Tarih (ör: 19.03.2026)" required>
+                <textarea name="icerik" placeholder="Yazının içeriği" rows="8" required></textarea>
+                <div style="margin-bottom:12px;">
+                    <label style="font-size:13px;color:#666;display:block;margin-bottom:6px;">Kapak Resmi</label>
+                    <input type="file" name="resim" accept="image/*">
+                </div>
+                <button type="submit">Ekle</button>
+            </form>
         </div>
 
         <div class="admin-bolum">
@@ -49,8 +48,11 @@
                 </div>
             <% }) %>
         </div>
-
     </div>
-    <footer>© 2026 Meriç Aytaş</footer>
+
+    <footer>
+        <span class="footer-left">Meriç Aytaş · Admin Paneli</span>
+        <span class="footer-right">© 2026 · Tüm hakları saklıdır.</span>
+    </footer>
 </body>
 </html>
