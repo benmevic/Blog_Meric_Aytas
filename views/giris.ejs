@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarsLab - Giriş</title>
+    <title>Meriç Aytaş · Giriş</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="giris-sayfa">
         <div class="giris-kutu">
-            <h2 style="margin-bottom:16px;">Blog Benmevic</h2>
-            <p style="font-size:13px;color:#999;margin-bottom:32px;">Admin paneline giriş yap</p>
-            <% if (typeof hata !== 'undefined') { %>
+            <div class="nav-logo" style="margin:0 auto 16px;width:44px;height:44px;font-size:14px;">MA</div>
+            <h2>Meriç Aytaş</h2>
+            <p style="font-size:13px;color:#555;margin-bottom:32px;">Admin paneline giriş yap</p>
+            <% if (typeof hata !== 'undefined' && hata) { %>
                 <p class="hata-mesaji"><%= hata %></p>
             <% } %>
             <form method="POST" action="/giris">

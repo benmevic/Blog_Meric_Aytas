@@ -6,19 +6,18 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f5f5f3;
-    color: #1a1a1a;
+    background: #0d0d0f;
+    color: #e8e8e8;
 }
 
 nav {
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
+    background: #111113;
+    border-bottom: 1px solid #222226;
     padding: 0 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 62px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .nav-brand {
@@ -44,12 +43,12 @@ nav {
 .nav-name {
     font-size: 15px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #e8e8e8;
 }
 
 nav a {
     font-size: 13px;
-    color: #555;
+    color: #888;
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 6px;
@@ -57,16 +56,34 @@ nav a {
 }
 
 nav a:hover {
-    background: #f0f0ee;
-    color: #1a1a1a;
+    background: #1a1a1e;
+    color: #e8e8e8;
 }
 
 .hero {
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
+    background: #111113;
+    border-bottom: 1px solid #222226;
     padding: 64px 48px 56px;
     position: relative;
     overflow: hidden;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #0f4c35;
+    border-radius: 50%;
+    opacity: 0.4;
 }
 
 .hero-accent {
@@ -78,9 +95,20 @@ nav a:hover {
     background: #0f4c35;
 }
 
-.hero-inner {
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 720px;
     margin: 0 auto;
+    width: 100%;
+    gap: 48px;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-tag {
@@ -92,28 +120,30 @@ nav a:hover {
     color: #0f4c35;
     text-transform: uppercase;
     margin-bottom: 20px;
-    background: #e8f4ef;
+    background: #0a2e20;
     padding: 5px 12px;
     border-radius: 20px;
+    border: 1px solid #0f4c35;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 14px;
     line-height: 1.2;
+    color: #f0f0f0;
 }
 
 .hero h1 span {
-    color: #0f4c35;
+    color: #1a7a54;
 }
 
 .hero p {
     font-size: 14px;
-    color: #666;
+    color: #888;
     line-height: 1.8;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .hero-stats {
@@ -121,19 +151,80 @@ nav a:hover {
     gap: 32px;
     margin-top: 32px;
     padding-top: 24px;
-    border-top: 1px solid #f0f0ee;
+    border-top: 1px solid #1e1e22;
 }
 
 .hero-stat-num {
     font-size: 22px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #f0f0f0;
 }
 
 .hero-stat-label {
     font-size: 12px;
-    color: #999;
+    color: #555;
     margin-top: 2px;
+}
+
+.monitor {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.monitor-screen {
+    background: #0a2e20;
+    border: 2px solid #0f4c35;
+    border-radius: 10px;
+    padding: 12px;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.monitor-glow {
+    position: absolute;
+    inset: -8px;
+    border-radius: 14px;
+    background: rgba(15,76,53,0.15);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.monitor-line {
+    height: 6px;
+    background: #0f4c35;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.monitor-line.short { width: 60%; }
+.monitor-line.shorter { width: 40%; }
+
+.monitor-dots {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.monitor-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.monitor-stand {
+    width: 40px;
+    height: 12px;
+    background: #1a1a1e;
+    border-radius: 0 0 4px 4px;
+    margin: 0 auto;
+}
+
+.monitor-base {
+    width: 70px;
+    height: 6px;
+    background: #1a1a1e;
+    border-radius: 3px;
+    margin: 0 auto;
 }
 
 .icerik {
@@ -146,14 +237,14 @@ nav a:hover {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    color: #999;
+    color: #444;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .kart {
-    background: #fff;
-    border: 1px solid #e8e8e8;
+    background: #111113;
+    border: 1px solid #1e1e22;
     border-radius: 10px;
     margin-bottom: 16px;
     transition: box-shadow .2s, border-color .2s;
@@ -161,8 +252,8 @@ nav a:hover {
 }
 
 .kart:hover {
-    border-color: #ccc;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-color: #0f4c35;
+    box-shadow: 0 4px 20px rgba(15,76,53,0.15);
 }
 
 .kart-resim {
@@ -170,18 +261,18 @@ nav a:hover {
     height: 200px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #1e1e22;
 }
 
 .kart-resim-placeholder {
     width: 100%;
     height: 200px;
-    background: #f0f0ee;
-    border-bottom: 1px solid #e8e8e8;
+    background: #0d1a14;
+    border-bottom: 1px solid #1e1e22;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ccc;
+    color: #333;
     font-size: 13px;
 }
 
@@ -196,11 +287,12 @@ nav a:hover {
     margin-bottom: 6px;
     letter-spacing: -0.3px;
     line-height: 1.3;
+    color: #e8e8e8;
 }
 
 .kart .tarih {
     font-size: 12px;
-    color: #bbb;
+    color: #444;
     margin-bottom: 12px;
 }
 
@@ -213,18 +305,18 @@ nav a:hover {
 
 .kart a {
     font-size: 13px;
-    color: #0f4c35;
+    color: #1a7a54;
     text-decoration: none;
     font-weight: 600;
 }
 
 .kart a:hover {
-    text-decoration: underline;
+    color: #22a06b;
 }
 
 footer {
-    background: #fff;
-    border-top: 1px solid #e8e8e8;
+    background: #111113;
+    border-top: 1px solid #1e1e22;
     padding: 32px 48px;
     margin-top: 16px;
     display: flex;
@@ -234,13 +326,13 @@ footer {
 
 .footer-left {
     font-size: 13px;
-    color: #1a1a1a;
+    color: #888;
     font-weight: 500;
 }
 
 .footer-right {
     font-size: 12px;
-    color: #bbb;
+    color: #444;
 }
 
 .admin-icerik {
@@ -250,8 +342,8 @@ footer {
 }
 
 .admin-bolum {
-    background: #fff;
-    border: 1px solid #e8e8e8;
+    background: #111113;
+    border: 1px solid #1e1e22;
     border-radius: 10px;
     padding: 28px;
     margin-bottom: 24px;
@@ -262,7 +354,8 @@ footer {
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #1e1e22;
+    color: #e8e8e8;
 }
 
 .admin-form input,
@@ -270,12 +363,14 @@ footer {
     width: 100%;
     padding: 10px 14px;
     font-size: 14px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #222226;
     border-radius: 6px;
     margin-bottom: 12px;
     outline: none;
     font-family: inherit;
     resize: vertical;
+    background: #0d0d0f;
+    color: #e8e8e8;
 }
 
 .admin-form input:focus,
@@ -304,7 +399,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 16px 0;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #1e1e22;
 }
 
 .admin-kart:last-child {
@@ -315,11 +410,12 @@ footer {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 4px;
+    color: #e8e8e8;
 }
 
 .admin-kart-bilgi p {
     font-size: 12px;
-    color: #999;
+    color: #555;
 }
 
 .admin-kart-butonlar {
@@ -330,28 +426,29 @@ footer {
 .btn-duzenle {
     padding: 6px 14px;
     font-size: 13px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #222226;
     border-radius: 6px;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #e8e8e8;
+    background: transparent;
 }
 
 .btn-duzenle:hover {
-    border-color: #aaa;
+    border-color: #444;
 }
 
 .btn-sil {
     padding: 6px 14px;
     font-size: 13px;
-    border: 1px solid #ffcccc;
+    border: 1px solid #3d1515;
     border-radius: 6px;
     text-decoration: none;
-    color: #cc0000;
-    background: #fff5f5;
+    color: #e05555;
+    background: #1e0f0f;
 }
 
 .btn-sil:hover {
-    background: #ffe5e5;
+    background: #2a1010;
 }
 
 .giris-sayfa {
@@ -359,12 +456,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f5f5f3;
+    background: #0d0d0f;
 }
 
 .giris-kutu {
-    background: #fff;
-    border: 1px solid #e8e8e8;
+    background: #111113;
+    border: 1px solid #222226;
     border-radius: 12px;
     padding: 48px 40px;
     width: 100%;
@@ -376,17 +473,20 @@ footer {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 6px;
+    color: #e8e8e8;
 }
 
 .giris-kutu input {
     width: 100%;
     padding: 10px 14px;
     font-size: 14px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #222226;
     border-radius: 6px;
     margin-bottom: 12px;
     outline: none;
     font-family: inherit;
+    background: #0d0d0f;
+    color: #e8e8e8;
 }
 
 .giris-kutu input:focus {
@@ -413,9 +513,9 @@ footer {
 
 .hata-mesaji {
     font-size: 13px;
-    color: #cc0000;
-    background: #fff5f5;
-    border: 1px solid #ffcccc;
+    color: #e05555;
+    background: #1e0f0f;
+    border: 1px solid #3d1515;
     border-radius: 6px;
     padding: 10px 14px;
     margin-bottom: 16px;
@@ -428,4 +528,27 @@ footer {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 24px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.35; }
+}
+
+@keyframes moveParticle {
+    0% { transform: translate(0,0); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.4; }
+    100% { transform: translate(var(--tx), var(--ty)); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .monitor-screen { animation: float 4s ease-in-out infinite; }
+    .monitor-glow { animation: pulse 4s ease-in-out infinite; }
+    .particle { animation: moveParticle var(--dur) linear infinite; }
 }

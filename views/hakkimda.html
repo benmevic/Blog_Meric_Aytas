@@ -10,7 +10,7 @@
     <nav>
         <a href="/" class="nav-brand">
             <div class="nav-logo">MA</div>
-            <span class="nav-name">Meriç Aytaş Blog</span>
+            <span class="nav-name">Meriç Aytaş</span>
         </a>
         <div>
             <a href="/">Anasayfa</a>
@@ -20,17 +20,39 @@
 
     <div class="hero">
         <div class="hero-accent"></div>
-        <div class="hero-inner">
-            <div class="hero-tag">Hakkımda</div>
-            <h1>Meriç <span>Aytaş</span></h1>
-            <p>Siber güvenlik ve teknoloji tutkunu, Zonguldak Bülent Ecevit Üniversitesi öğrencisi.</p>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-tag">Hakkımda</div>
+                <h1>Meriç <span>Aytaş</span></h1>
+                <p>Siber güvenlik, teknoloji ve kod üzerine kişisel notlar. Öğrendiklerimi, keşfettiklerimi paylaşıyorum.</p>
+            </div>
+            <div class="monitor">
+                <div class="monitor-screen">
+                    <div class="monitor-glow"></div>
+                    <div class="monitor-dots">
+                        <div class="monitor-dot" style="background:#ff5f57"></div>
+                        <div class="monitor-dot" style="background:#febc2e"></div>
+                        <div class="monitor-dot" style="background:#28c840"></div>
+                    </div>
+                    <div class="monitor-line"></div>
+                    <div class="monitor-line short"></div>
+                    <div class="monitor-line"></div>
+                    <div class="monitor-line shorter"></div>
+                    <div class="monitor-line short"></div>
+                    <div class="monitor-line"></div>
+                    <div class="monitor-line shorter"></div>
+                </div>
+                <div class="monitor-stand"></div>
+                <div class="monitor-base"></div>
+            </div>
         </div>
     </div>
 
     <div class="icerik">
         <div class="admin-bolum">
             <h2>Kimim</h2>
-            <p style="font-size:15px;color:#555;line-height:1.8;">
+            <p style="font-size:15px;color:#888;line-height:1.8;">
                 Merhaba, ben Meriç Aytaş. Zonguldak Bülent Ecevit Üniversitesi öğrencisiyim.
                 Teknoloji, siber güvenlik ve yazılım geliştirme üzerine içerikler üretiyorum.
                 Bu blog, öğrendiklerimi ve keşfettiklerimi paylaştığım kişisel alanım.
@@ -39,14 +61,14 @@
 
         <div class="admin-bolum">
             <h2>Eğitim</h2>
-            <p style="font-size:15px;color:#555;line-height:1.8;">
-                Zonguldak Bülent Ecevit Üniversitesi Bilgisayar Mühendisliği bölümünde 4. sınıf olarak eğitimime devam ediyorum.
+            <p style="font-size:15px;color:#888;line-height:1.8;">
+                Zonguldak Bülent Ecevit Üniversitesi
             </p>
         </div>
 
         <div class="admin-bolum">
             <h2>İlgi Alanlarım</h2>
-            <ul style="font-size:15px;color:#555;line-height:2;padding-left:20px;">
+            <ul style="font-size:15px;color:#888;line-height:2;padding-left:20px;">
                 <li>Yazılım geliştirme</li>
                 <li>Siber güvenlik</li>
                 <li>Oyun oynamak</li>
@@ -59,5 +81,19 @@
         <span class="footer-left">Meriç Aytaş · Kişisel Blog</span>
         <span class="footer-right">© 2026 · Tüm hakları saklıdır.</span>
     </footer>
+
+    <script>
+        const container = document.getElementById('particles');
+        for(let i = 0; i < 30; i++){
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const x = Math.random()*100, y = Math.random()*100;
+            const tx = (Math.random()-0.5)*200, ty = (Math.random()-0.5)*200;
+            const dur = (4 + Math.random()*6).toFixed(1)+'s';
+            const delay = (Math.random()*6).toFixed(1)+'s';
+            p.style.cssText = `left:${x}%;top:${y}%;--tx:${tx}px;--ty:${ty}px;--dur:${dur};animation-delay:${delay}`;
+            container.appendChild(p);
+        }
+    </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
     <nav>
         <a href="/" class="nav-brand">
             <div class="nav-logo">MA</div>
-            <span class="nav-name">Meriç Aytaş Blog</span>
+            <span class="nav-name">Meriç Aytaş</span>
         </a>
         <div>
             <a href="/">Anasayfa</a>
@@ -20,10 +20,12 @@
 
     <div class="hero">
         <div class="hero-accent"></div>
-        <div class="hero-inner">
-            <div class="hero-tag">Blog Yazısı</div>
-            <h1><%= yazi.baslik %></h1>
-            <p style="font-size:13px;color:#999;margin-top:8px;"><%= yazi.tarih %></p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-tag">Blog Yazısı</div>
+                <h1><%= yazi.baslik %></h1>
+                <p style="font-size:13px;color:#555;margin-top:8px;"><%= yazi.tarih %></p>
+            </div>
         </div>
     </div>
 
@@ -32,7 +34,7 @@
             <img src="<%= yazi.resim %>" class="yazi-resim" alt="<%= yazi.baslik %>">
         <% } %>
         <div class="admin-bolum">
-            <p style="font-size:15px;color:#555;line-height:1.8;"><%= yazi.icerik %></p>
+            <p style="font-size:15px;color:#888;line-height:1.8;"><%= yazi.icerik %></p>
         </div>
         <a href="/" class="btn-duzenle" style="display:inline-block;margin-top:8px;padding:10px 20px;">← Geri Dön</a>
     </div>
